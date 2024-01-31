@@ -2,7 +2,16 @@ import React from "react";
 import "../Styles/Css/home.css";
 import MovieItem from "../Components/MovieItem";
 import SlideItem from "../Components/SlidesItem";
+import Slider from "react-slick";
 const Home = () => {
+    const settings = {
+        dots: false,
+        Infinity: true,
+        arrows: true,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+    }
     return (
         <>
             {/*intro */}
@@ -16,14 +25,14 @@ const Home = () => {
                     </ul>
                 </header>
                 {/*slide */}
-                <ul className="introSlide">
-                    <li>
-                        <SlideItem name="웡카" />
-                    </li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                </ul>
+                <div className="introSlide">
+                    <Slider {...settings}>
+                        {/*<SlideItem name="짱구" />
+                        <SlideItem name="skeh" />*/}
+                        <div>1</div>
+                        <div>2</div>
+                    </Slider>
+                </div>
             </section>
             {/*== intro end */}
             {/*Top 10 ranking */}

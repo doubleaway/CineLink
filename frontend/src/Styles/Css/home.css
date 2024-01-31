@@ -6,4 +6,11 @@ html {
   font-family: "Noto Sans KR", sans-serif;
 }
 
+.introSlide {
+  height: 100vh;
+}
+.introSlide div {
+  height: 100%;
+}
+
 /*# sourceMappingURL=home.css.map */
