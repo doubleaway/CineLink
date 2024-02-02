@@ -9,10 +9,19 @@ html {
 
 //slide
 .introSlide {
-
     height: 100vh;
+    max-width: 100vw;
+    overflow: hidden;
+    background-color: antiquewhite;
 
     div {
+        background: rgba(244, 255, 333, 0.3);
         height: 100%;
+        background-image: url("https://images.ctfassets.net/hrltx12pl8hq/28ECAQiPJZ78hxatLTa7Ts/2f695d869736ae3b0de3e56ceaca3958/free-nature-images.jpg?fit=fill&w=1200&h=630");
+
+        &.lastImage {
+            background-image: url("https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg");
+            background-size: contain;
+        }
     }
 }

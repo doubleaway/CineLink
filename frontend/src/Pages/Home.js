@@ -2,35 +2,53 @@ import React from "react";
 import "../Styles/Css/home.css";
 import MovieItem from "../Components/MovieItem";
 import SlideItem from "../Components/SlidesItem";
+import styled from "styled-components";
 import Slider from "react-slick";
 const Home = () => {
     const settings = {
-        dots: false,
+        dots: true,
         Infinity: true,
-        arrows: true,
+        arrows: false,
         speed: 500,
-        slidesToShow: 1,
-        slidesToScroll: 1,
     }
+    const HeaderStyle = styled.header`
+        width: 100%;
+        height: 70px;
+        position: sticky;
+        top: 0;
+        background: rgba(0,0,0,0.8);
+        z-index: 10;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 2.5%;
+        box-sizing: border-box;
+        color: white;
+        align-items: center;
+    `;
+    const MenuList = styled.ul`
+        display: flex;
+        width: 15%;
+        min-width: 150px;
+        justify-content: space-around;
+        align-items: center;
+    `;
     return (
         <>
             {/*intro */}
             <section className="introSec">
                 {/*header*/}
-                <header>
-                    <div className="logo"></div>
-                    <ul className="menu">
+                <HeaderStyle>
+                    <div className="logo">1</div>
+                    <MenuList>
                         <li>예매하기</li>
                         <li>Login</li>
-                    </ul>
-                </header>
+                    </MenuList>
+                </HeaderStyle>
                 {/*slide */}
                 <div className="introSlide">
                     <Slider {...settings}>
-                        {/*<SlideItem name="짱구" />
-                        <SlideItem name="skeh" />*/}
-                        <div>1</div>
-                        <div>2</div>
+                        <SlideItem name="짱구" />
+                        <SlideItem name="skeh" />
                     </Slider>
                 </div>
             </section>
